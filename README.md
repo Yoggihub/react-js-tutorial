@@ -40,3 +40,14 @@ or use specific versions
 
 #it works
 check the command line for the console.log message Developer tools -> console -> it works :)
+
+
+#Set up a personal github account
+If you are facing this propblem on mac or windows:
+GitHub: Permission denied (publickey). fatal: Could not read from remote repository
+
+https://help.github.com/articles/set-up-git/
+
+#How to manage branches on github
+https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+
