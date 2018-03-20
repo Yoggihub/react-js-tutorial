@@ -19,5 +19,10 @@ git push origin [name_of_your_new_branch] -u
  see all branches created by using :
  git branch
 
+ merge develop or master to your own personal branch
+git merge origin/develop
+or
+git merge origin/master
+
  #Set up eslint
- npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react  --save-dev
+ npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint --save-dev
