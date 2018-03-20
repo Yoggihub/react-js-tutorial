@@ -1,1 +1,1 @@
-console.log("Welcome to react js tutorial!");
+console.log('Welcome to react js tutorial!');

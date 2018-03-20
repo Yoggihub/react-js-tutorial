@@ -1,6 +1,5 @@
 # React jS tutorial
 
-
 # Usage
 Switch to the branch you're interested in (branches = different stages in the series) and compare/ download the source code.
 
@@ -16,7 +15,7 @@ create a file in app folder called index.html its a entry point of the app
 
 
 #commands
-npm install webpack-cli -D
+npm install
 npm start
 
 #issues 
@@ -41,13 +40,4 @@ or use specific versions
 #it works
 check the command line for the console.log message Developer tools -> console -> it works :)
 
-
-#Set up a personal github account
-If you are facing this propblem on mac or windows:
-GitHub: Permission denied (publickey). fatal: Could not read from remote repository
-
-https://help.github.com/articles/set-up-git/
-
-#How to manage branches on github
-https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
 
