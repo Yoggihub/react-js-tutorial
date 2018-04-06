@@ -15,6 +15,7 @@ git checkout [name_of_your_new_branch]
 
 Push the branch on github and set upstream:
 git push origin [name_of_your_new_branch] -u
+git push --set-upstream origin 3-multiple-components
 
 see all branches created by using :
 git branch
