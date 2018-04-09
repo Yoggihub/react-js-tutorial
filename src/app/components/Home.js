@@ -7,8 +7,13 @@ export class Home extends React.Component {
       age: props.startingAge,
       status: 0
     };
+    setTimeout(() => {
+      this.setState({
+        status: 1
+      });
+    }, 3000);
   }
-
+  // This function will only update the status section. Turn on the Rendering section in dev tools in chrome and select Paint flashing to see changes.
   incrementAge() {
     this.setState({
       age: this.state.age + 3
