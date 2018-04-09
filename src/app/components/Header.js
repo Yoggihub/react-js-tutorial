@@ -1,17 +1,15 @@
 import React from 'react';
 
-export class Header extends React.Component {
-  render() {
-    return (
-      <nav className="navbar navbar-default">
-        <div className="container">
-          <div className="navbar-header">
-            <ul className="nav navbar-nav">
-              <li><a href="#">Home</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-}
+
+// Changing the component. Header is now stateless component and we no longer use it as state. Change the components to stateless if you don't need a state
+export const Header = props => (
+  <nav className="navbar navbar-default">
+    <div className="container">
+      <div className="navbar-header">
+        <ul className="nav navbar-nav">
+          <li><a href="#">{props.homeLink}</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+);
