@@ -5,7 +5,8 @@ export class Home extends React.Component {
     super();
     this.state = {
       age: props.startingAge,
-      status: 0
+      status: 0,
+      homeLink: 'Changed Link'
     };
     setTimeout(() => {
       this.setState({
@@ -13,12 +14,18 @@ export class Home extends React.Component {
       });
     }, 3000);
   }
+
+  onChangeLink() {
+    this.props.changeLink(this.state.homeLink);
+  }
+
   // This function will only update the status section. Turn on the Rendering section in dev tools in chrome and select Paint flashing to see changes.
   incrementAge() {
     this.setState({
       age: this.state.age + 3
     });
   }
+
   render() {
     console.log(this.props);
     return (
@@ -34,6 +41,9 @@ export class Home extends React.Component {
         <hr />
         {/* We cannot do this here because greet is not a function. () => this.props.greet() */}
         <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
+        <hr />
+        <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header Link</button>
+
       </div>
     );
   }
