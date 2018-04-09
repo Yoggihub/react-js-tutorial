@@ -31,6 +31,15 @@ git merge origin/master
 reset the branch to previous changes
 git reset --merge
 
+Renaming the existing branch
+git branch --move <old_name> <new_name>
+but to push it, you must delete the old and push the new
+
+git checkout <new_name>
+git push origin [--set-upstream] <new_name>
+git push origin --delete <old_name>
+
+
 logs
 https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
 git log
@@ -43,6 +52,7 @@ https://help.github.com/articles/fetching-a-remote/
 
 
 see the changed files
+git log -m --name-only
 git diff HEAD~1
 
 See the summary of changes again:

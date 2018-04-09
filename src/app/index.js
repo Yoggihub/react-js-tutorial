@@ -5,6 +5,10 @@ import { Header } from './components/Header';
 
 class App extends React.Component {
   render() {
+    let user = {
+      name: 'Anna',
+      hobbies: ['Sports', 'Swimming', 'hiking']
+    };
     return (
       <div className="container">
         <div className="row">
@@ -14,7 +18,9 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-10 com-xs-offset-1">
-            <Home />
+            <Home name="Max" age={27} user={user}>
+              <p>This is a paragraph in home component</p>
+            </Home>
           </div>
         </div>
       </div>
