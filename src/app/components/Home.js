@@ -20,6 +20,7 @@ export class Home extends React.Component {
     });
   }
   render() {
+    console.log(this.props);
     return (
       <div>
         <p>This is a Home component</p>
@@ -30,6 +31,9 @@ export class Home extends React.Component {
         {/* Comments: this.incrementAge so this button will only execute when its been called */}
         {/* Comments: onClick={this.incrementAge.bind(this)} is anothe rway to trigger events on onCLick */}
         <button onClick={() => this.incrementAge()} className="btn btn-primary">Increment-Age</button>
+        <hr />
+        {/* We cannot do this here because greet is not a function. () => this.props.greet() */}
+        <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
       </div>
     );
   }
@@ -37,5 +41,6 @@ export class Home extends React.Component {
 
 Home.propTypes = {
   name: React.PropTypes.string,
-  age: React.PropTypes.number
+  age: React.PropTypes.number,
+  greet: React.PropTypes.func
 };

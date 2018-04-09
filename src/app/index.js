@@ -4,17 +4,20 @@ import { Home } from './components/Home';
 import { Header } from './components/Header';
 
 class App extends React.Component {
+  onGreet() {
+    alert('Hallo!');
+  }
   render() {
     return (
       <div className="container">
         <div className="row">
           <div className="col-xs-10 com-xs-offset-1">
-            <Header homeLink="Home"/>
+            <Header homeLink="Home" />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-10 com-xs-offset-1">
-            <Home name="Max" startingAge={27} />
+            <Home name="Max" startingAge={27}  greet={this.onGreet} />
           </div>
         </div>
       </div>
