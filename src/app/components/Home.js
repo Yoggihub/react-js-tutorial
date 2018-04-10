@@ -13,6 +13,40 @@ export class Home extends React.Component {
         status: 1
       });
     }, 3000);
+    console.log('Constructor');
+  }
+
+  componentWillMount() {
+    console.log('Component will mount');
+  }
+
+  componentDidMount() {
+    console.log('Component did mount');
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('Component will receive props', nextProps);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Should component update', nextProps, nextState);
+    // Don't update the view even the state is changed egs: status changed from 0 to 1 but the shouldComponent  related lyfecycles didn't changed.
+    // if (nextState.status === 1) {
+    //   return false;
+    // }
+    return true;
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log('Component will update', nextProps, nextState);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Component did update', prevProps, prevState);
+  }
+
+  componentWillUnmount(nextProps, nextState) {
+    console.log('component will Unmount', nextProps, nextState);
   }
 
   onChangeLink() {
@@ -32,7 +66,6 @@ export class Home extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <p>This is a Home component</p>
