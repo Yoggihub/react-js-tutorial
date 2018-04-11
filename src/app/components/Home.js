@@ -16,18 +16,22 @@ export class Home extends React.Component {
     console.log('Constructor');
   }
 
+  // Execute immediately before initital render method
   componentWillMount() {
     console.log('Component will mount');
   }
 
+  // Execute immediately after initital render method
   componentDidMount() {
     console.log('Component did mount');
   }
 
+  // when components receive new props
   componentWillReceiveProps(nextProps) {
     console.log('Component will receive props', nextProps);
   }
 
+  // before rendering, after receiving new props or
   shouldComponentUpdate(nextProps, nextState) {
     console.log('Should component update', nextProps, nextState);
     // Don't update the view even the state is changed egs: status changed from 0 to 1 but the shouldComponent  related lyfecycles didn't changed.

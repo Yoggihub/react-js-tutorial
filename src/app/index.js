@@ -47,11 +47,11 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-10 com-xs-offset-1" />
-            {homeComp}
+          {homeComp}
         </div>
         <div className="row">
           <div className="col-xs-10 com-xs-offset-1" />
-           <button onClick={this.onChangeHomeMounted.bind(this)} className="btn btn-primary">(Un) Mount Home Component </button>
+          <button onClick={this.onChangeHomeMounted.bind(this)} className="btn btn-primary">(Un) Mount Home Component </button>
         </div>
       </div>
 
