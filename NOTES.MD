@@ -39,6 +39,17 @@ git checkout <new_name>
 git push origin [--set-upstream] <new_name>
 git push origin --delete <old_name>
 
+See the incoming changes before pull
+git fetch && git log ..origin/develop
+git diff develop origin/develop
+
+See the incoming changes before pull
+git diff HEAD~1
+
+Change the commit message
+https://help.github.com/articles/changing-a-commit-message/
+git commit --amend
+
 
 logs
 https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History

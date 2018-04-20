@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, Route, browserHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Route, browserHistory, HashRouter, Switch } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Root } from './components/Root';
 import { User } from './components/User';
@@ -17,10 +17,14 @@ class App extends React.Component {
       // </BrowserRouter>
       // This will use the {this.props.children in the Root class and first load the header and then the childrens in the Root}
       <Router history={browserHistory}>
-        <Root>
-          <Route path="/user" component={User} />
-          <Route path="/home" component={Home} />
-        </Root>
+        <Switch>
+          <Root>
+            <Route exact path="/" component={Home} />
+            <Route path="/user" component={User} />
+            <Route path="/home" component={Home} />
+          </Root>
+          <Route path="single-home" component={Home} />
+        </Switch>
       </Router>
     );
   }
